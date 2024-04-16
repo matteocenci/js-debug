@@ -13,7 +13,7 @@
 // ESERCIZIO 1
 function checkAge() {
     const myAge = 32;
-    const message = '';
+    let message = '';   //la variabile deve essere let
 
     if (myAge < 18) {
         message = `Sei troppo giovane! Hai ${myAge} anni!`;
@@ -23,9 +23,11 @@ function checkAge() {
 }
 checkAge();
 
+
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+console.log(colors.length);
     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 }
 printColorsNumber();
@@ -33,7 +35,7 @@ printColorsNumber();
 
 // ESERCIZIO 3
 function addNumbers() {
-    const userNumber = prompt('Inserisci un numero');
+    const userNumber = parseInt(prompt('Inserisci un numero'));    //mancava paresInt
     const total = userNumber + 12;
 
     console.log(`Il risultato finale è ${total}`);
@@ -49,7 +51,7 @@ function checkAccess() {
     let grantAccess = 'false';
 
     if (addresses.includes(userEmail)) {
-        grantAccess = 'true';
+        grantAccess = true;  //qui il true deve essere senza ''
     }
 
     if (grantAccess === true) {
@@ -62,12 +64,12 @@ checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
-function checkAccessImproved() {
+function checkAccessImproved() {  
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
 
     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = 'false';
+    let grantAccess = false;          //qui il true deve essere senza ''
 
     for (let i = 0; i < addresses.length; i++) {
         const email = addresses[i];
@@ -75,7 +77,7 @@ function checkAccessImproved() {
         if (userEmail.length > 5) {
 
             if (email === userEmail) {
-                grantAccess = 'true';
+                grantAccess = true;        //qui il true deve essere senza ''
 
             }
 
@@ -87,11 +89,10 @@ function checkAccessImproved() {
             console.log('Accesso negato!');
         }
     }
-    checkAccessImproved();
+    //manca la parentesi alla fine
+}
 
-
-
-
+checkAccessImproved();
 
 
 
