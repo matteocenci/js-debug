@@ -34,9 +34,9 @@ printColorsNumber();
 
 
 // ESERCIZIO 3
-function addNumbers() {
+function addNumbers(numberToAdd) {
     const userNumber = parseInt(prompt('Inserisci un numero'));    //mancava paresInt
-    const total = userNumber + 12;
+    const total = userNumber + numberToAdd;
 
     console.log(`Il risultato finale è ${total}`);
 }
