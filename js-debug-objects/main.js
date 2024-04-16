@@ -25,7 +25,7 @@ const cars = [
     {
         manufacturer: 'Volkswagen',
         model: 'Golf',
-        type: 'Benzina'
+        type: 'benzina'       // scrivere Benzina con b minuscola altrimenti non lo prende
     },
     {
         manufacturer: 'Fiat',
@@ -50,29 +50,25 @@ const cars = [
     {
         manufacturer: 'Ford',
         model: 'Kuga',
-        type: 'Diesel'
+        type: 'diesel'      //scrivere Diesel con d minuscola altrimenti non lo prende
     },
     {
         manufacturer: 'Seat',
         model: 'Ibiza',
         type: 'metano'
-    }
+    },                   //manca la virgola
     {
         manufacturer: 'Audi',
         model: 'R8',
-        type: 'Benzina'
+        type: 'benzina' // scrivere Benzina con b minuscola altrimenti non lo prende
     },
 ];
 
-const gasolineCars = cars.filter( (auto) >= auto.type === 'benzina');
+const gasolineCars = cars.filter( (auto) =>  auto.type === 'benzina');   //il simbolo era sbagliato >=
 
-const dieselCars = cars.filter( (auto) => {
-    auto.type === 'diesel';
-});
+const dieselCars = cars.filter( (auto) => auto.type === 'diesel'); // stesso procedimento di gasolineCars
 
-const otherCars = cars.filter( (auto) => {
-    return auto.type !== 'benzina' || auto.type !== 'diesel';
-});
+const otherCars = cars.filter( (auto) =>  auto.type === 'GPL' || auto.type === 'metano' );  //meglio usare stesso procedimento di sopra mettendo GPL e metano
 
 console.log('Auto a benzina');
 console.log('*******************************');
